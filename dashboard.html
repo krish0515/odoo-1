@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+</head>
+
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-dark bg-primary">
+
+        <div class="container-fluid">
+
+            <span class="navbar-brand mb-0 h1">
+
+                Traveloop ✈️
+
+            </span>
+
+            <a href="/"
+               class="btn btn-light">
+
+               Logout
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="container mt-5">
+
+        <!-- Welcome Card -->
+
+        <div class="card bg-primary text-white p-4 shadow mb-5">
+
+            <h1>
+
+                Welcome Traveler 🌍
+
+            </h1>
+
+            <p>
+
+                Start planning your next trip.
+
+            </p>
+
+            <a href="/create-trip"
+               class="btn btn-light w-25">
+
+               Plan New Trip
+
+            </a>
+
+        </div>
+
+        <!-- Trips -->
+
+        <h2 class="mb-4">
+
+            My Trips
+
+        </h2>
+
+        <div class="row">
+
+            {% for trip in trips %}
+
+            <div class="col-md-4">
+
+                <div class="card bg-secondary text-white shadow mb-4">
+
+                    <div class="card-body">
+
+                        <h3>
+
+                            {{ trip.name }}
+
+                        </h3>
+
+                        <p>
+
+                            📅 {{ trip.date }}
+
+                        </p>
+
+                        <p>
+
+                            💰 ₹{{ trip.budget }}
+
+                        </p>
+
+                        <a href="/trips"
+                           class="btn btn-success">
+
+                           View Trip
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Trip</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-dark bg-primary">
+
+        <div class="container-fluid">
+
+            <span class="navbar-brand mb-0 h1">
+
+                Traveloop ✈️
+
+            </span>
+
+            <!-- Dashboard Button -->
+
+            <a href="/dashboard"
+               class="btn btn-light">
+
+               Dashboard
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- Main Container -->
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-6">
+
+                <div class="card shadow p-4">
+
+                    <!-- Heading -->
+
+                    <h2 class="text-center mb-4">
+
+                        Create New Trip 🌍
+
+                    </h2>
+
+                    <!-- Create Trip Form -->
+
+                    <form method="POST"
+                          action="/save-trip">
+
+                        <!-- Trip Name -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Trip Name
+
+                            </label>
+
+                            <input
+                                type="text"
+                                name="trip_name"
+                                class="form-control"
+                                placeholder="Enter Trip Name"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- Start Date -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Start Date
+
+                            </label>
+
+                            <input
+                                type="date"
+                                name="start_date"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- End Date -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                End Date
+
+                            </label>
+
+                            <input
+                                type="date"
+                                name="end_date"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- Description -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Trip Description
+
+                            </label>
+
+                            <textarea
+                                name="description"
+                                class="form-control"
+                                rows="4"
+                                placeholder="Write about your trip..."
+                            ></textarea>
+
+                        </div>
+
+                        <!-- Submit Button -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100">
+
+                            Save Trip
+
+                        </button>
+
+                    </form>
+
+                    <!-- My Trips Button -->
+
+                    <div class="text-center mt-4">
+
+                        <a href="/trips"
+                           class="btn btn-success">
+
+                           View My Trips
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
